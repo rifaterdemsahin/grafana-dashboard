@@ -6,19 +6,6 @@ admin:
   ##
   password: "your-password"
 
-## Grafana Image Renderer configuration for Grafana
-##
-imageRenderer:
-  ## @param imageRenderer.enabled Enable using a remote rendering service to render PNG images
-  ##
-  enabled: true
-  ## @param imageRenderer.serverURL URL of the remote rendering service
-  ##
-  serverURL: "http://grafana-imagerenderer.grafana-monitoring.svc.cluster.local:8081/render"
-  ## @param imageRenderer.callbackURL URL of the callback service
-  ##
-  callbackURL: "http://grafana.grafana-monitoring.svc.cluster.local:3000/"
-
 ## @section Grafana Deployment parameters
 grafana:
   ## @param grafana.replicaCount Number of Grafana nodes
@@ -31,8 +18,6 @@ grafana:
     type: NodePort
     port: 3000
     nodePort: 30000
-  plugins:
-    - grafana-image-renderer
   initContainers:
     - name: init-chmod-data
       image: busybox
