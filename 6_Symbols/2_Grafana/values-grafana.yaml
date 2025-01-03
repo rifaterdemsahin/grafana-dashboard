@@ -4,6 +4,7 @@ admin:
   user: "admin"
   ## @param admin.password Admin password. If a password is not provided a random password will be generated
   ##
+  ## Test this to make sure the values yaml used your values not the default values...if the structure fails it defaults back to default values
   password: "your-password"
 
 ## @section Grafana Deployment parameters
