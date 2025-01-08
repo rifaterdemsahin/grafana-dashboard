@@ -32,6 +32,13 @@ grafana:
   extraVolumes:
     - name: grafana-storage
       emptyDir: {}
+  extraVolumeMounts:
+    - name: grafana-dashboards-provisioning
+      mountPath: /etc/grafana/provisioning/dashboards
+  extraVolumes:
+    - name: grafana-dashboards-provisioning
+      configMap:
+        name: grafana-dashboards-provisioning
 
 ## Service parameters
 ##
