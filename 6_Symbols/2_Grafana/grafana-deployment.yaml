@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: grafana
+  name: grafana-dashboard
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: grafana
+      app: grafana-dashboard
   template:
     metadata:
       labels:
-        app: grafana
+        app: grafana-dashboard
     spec:
       containers:
       - name: grafana
