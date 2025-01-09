@@ -35,19 +35,19 @@ grafana:
   volumeMounts:
     - name: grafana-storage
       mountPath: /opt/bitnami/grafana
-    - name: grafana_dashboard_config
+    - name: grafana-dashboard-config
       mountPath: /opt/bitnami/grafana/dashboards
       readOnly: true
   volumes:
-    - name: grafana_dashboard_config
+    - name: grafana-dashboard-config
       configMap:
-        name: grafana_dashboard_config
+        name: grafana-dashboard-config
         items:
           - key: dashboards/grafana_dashboard_config.json
             path: grafana_dashboard_config.json
 
 dashboardsConfigMaps:
-   - configMapName: grafana_dashboard_config
+   - configMapName: grafana-dashboard-config
      folderName: dashboards
      fileName: grafana_dashboard_config.json
 

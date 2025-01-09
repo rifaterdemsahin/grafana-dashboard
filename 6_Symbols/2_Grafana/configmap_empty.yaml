@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: grafana_dashboard_config
+  name: grafana-dashboard-config
   labels:
     grafana_dashboard: "1"
 data:
-  dashboards/grafana_dashboard_config: |
+  dashboards_grafana_dashboard_config: |
     {
       "dashboard": {
         "id": null,
