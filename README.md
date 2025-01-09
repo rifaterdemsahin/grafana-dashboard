@@ -23,6 +23,8 @@ Collaborators>
 - Cheuk > https://www.linkedin.com/in/ch-c-797533177/
 - Nawal > https://www.linkedin.com/in/nawalc/
 - Tomi > https://www.linkedin.com/in/oluwatomi-amao-245b61189/
+- Joseph > https://github.com/JPHardy/grafana-dashboard
+- Nicole > https://github.com/nicole-johnston/grafana-dashboard
 
 
 prompts:
