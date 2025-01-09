@@ -42,6 +42,12 @@ grafana:
     - name: grafana-dashboard-config
       configMap:
         name: grafana-dashboard-config
+
+dashboardsConfigMaps:
+   - configMapName: grafana-dashboard-config
+     folderName: grafana-dashboard-config
+     fileName: grafana-dashboard-config.json
+
 ## Service parameters
 ##
 service:
