@@ -39,7 +39,7 @@ grafana:
   volumes:
     - name: grafana-dashboard-config
       configMap:
-        name: grafana-dashboard
+        name: grafana-dashboard-config
 
 ## Service parameters
 ##
