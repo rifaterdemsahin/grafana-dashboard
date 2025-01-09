@@ -5,7 +5,7 @@ metadata:
   labels:
     grafana_dashboard: "1"
 data:
-  dashboards/grafana-dashboard-config: |
+  dashboards/grafana_dashboard_config: |
     {
       "dashboard": {
         "id": null,

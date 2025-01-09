@@ -43,13 +43,13 @@ grafana:
       configMap:
         name: grafana-dashboard-config
         items:
-          - key: dashboards/grafana-dashboard-config.json
-            path: grafana-dashboard-config.json
+          - key: dashboards/grafana_dashboard_config.json
+            path: grafana_dashboard_config.json
 
 dashboardsConfigMaps:
    - configMapName: grafana-dashboard-config
      folderName: dashboards
-     fileName: grafana-dashboard-config.json
+     fileName: grafana_dashboard_config.json
 
 ## Service parameters
 ##
