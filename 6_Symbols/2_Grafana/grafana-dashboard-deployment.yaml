@@ -37,7 +37,7 @@ grafana:
             path: grafana_dashboard_config.json
           
 dashboardsProvider:
-  enabled: True
+  enabled: true
   configMapName: grafana-dashboard-config
 
 dashboardsConfigMaps:
