@@ -35,6 +35,10 @@ grafana:
         items:
           - key: grafana_dashboard_config.json
             path: grafana_dashboard_config.json
+          
+dashboardsProvider:
+  enabled: True
+  configMapName: grafana-dashboard-config
 
 dashboardsConfigMaps:
    - configMapName: grafana-dashboard-config
