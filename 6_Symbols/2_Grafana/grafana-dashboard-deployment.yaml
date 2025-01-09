@@ -19,16 +19,6 @@ grafana:
     type: NodePort
     port: 3000
     nodePort: 30000
-  initContainers:
-    - name: init-chmod-data
-      image: busybox
-      command: ['sh', '-c', 'chmod -R 777 /var/lib/grafana']
-      volumeMounts:
-        - name: grafana-storage
-          mountPath: /opt/bitnami/grafana
-    - name: install-ping
-      image: alpine
-      command: ['sh', '-c', 'apk add --no-cache iputils && sleep 1']
   extraVolumes:
     - name: grafana-storage
       emptyDir: {}
