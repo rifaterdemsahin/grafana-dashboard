@@ -32,6 +32,14 @@ grafana:
   extraVolumes:
     - name: grafana-storage
       emptyDir: {}
+  volumeMounts:
+    - name: grafana-dashboard-config
+      mountPath: /var/lib/grafana/dashboards
+      readOnly: true
+  volumes:
+    - name: grafana-dashboard-config
+      configMap:
+        name: grafana-dashboard
 
 ## Service parameters
 ##
