@@ -49,6 +49,9 @@ dashboardsProvider:
 dashboardsConfigMaps:
    - configMapName: grafana-dashboard-config
      fileName: grafana_dashboard_config.json
+   - configMapName: grafana-dashboards-provisioning
+     fileName: dashboards.yaml
+  
 
 ## Service parameters
 ##
