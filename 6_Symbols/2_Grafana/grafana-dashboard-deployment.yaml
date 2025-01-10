@@ -44,7 +44,7 @@ grafana:
           
 dashboardsProvider:
   enabled: true
-  configMapName: grafana-dashboard-config
+  configMapName: grafana-dashboards-provisioning
 
 dashboardsConfigMaps:
    - configMapName: grafana-dashboard-config
