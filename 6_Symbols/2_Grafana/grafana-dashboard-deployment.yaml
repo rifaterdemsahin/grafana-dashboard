@@ -28,6 +28,9 @@ grafana:
     - name: grafana-dashboard-config
       mountPath: /opt/bitnami/grafana/dashboards
       readOnly: true
+    - name: grafana-datasources
+      mountPath: /opt/bitnami/grafana/provisioning/datasources
+      subPath: random-walk-datasource.yaml
   volumes:
     - name: grafana-dashboard-config
       configMap:
@@ -35,6 +38,7 @@ grafana:
         items:
           - key: grafana_dashboard_config.json
             path: grafana_dashboard_config.json
+
           
 dashboardsProvider:
   enabled: true
