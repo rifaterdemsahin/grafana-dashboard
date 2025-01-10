@@ -1,0 +1,33 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: grafana-dashboard-config
+  labels:
+    grafana_dashboard: "1"
+data:
+  grafana_dashboard_config: |
+    {
+       "dashboard": {
+         "id": null,
+         "title": "Random Walk Dashboard",
+         "tags": [],
+         "timezone": "browser",
+         "schemaVersion": 16,
+         "version": 0,
+         "panels": [
+           {
+             "type": "graph",
+             "title": "Random Walk",
+             "gridPos": { "x": 0, "y": 0, "w": 24, "h": 9 },
+             "datasource": "Random Walk Data",
+             "targets": [
+               {
+                 "refId": "A",
+                 "scenarioId": "random_walk"
+               }
+             ]
+           }
+         ]
+       }
+     }
+
