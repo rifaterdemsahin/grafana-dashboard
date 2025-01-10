@@ -28,17 +28,29 @@ grafana:
     - name: grafana-dashboard-config
       mountPath: /opt/bitnami/grafana/dashboards
       readOnly: true
+    - name: grafana-datasources
+      mountPath: /opt/bitnami/grafana/provisioning/datasources
   volumes:
     - name: grafana-dashboard-config
       configMap:
         name: grafana-dashboard-config
-        items:
-          - key: grafana_dashboard_config.json
-            path: grafana_dashboard_config.json
+    - name: grafana-dashboards-provisioning
+      configMap:
+        name: grafana-dashboards-provisioning
+
+    - name: grafana-datasources
+      configMap:
+        name: grafana-datasources
+
+          
+dashboardsProvider:
+  enabled: true
+  configMapName: grafana-dashboards-provisioning
 
 dashboardsConfigMaps:
    - configMapName: grafana-dashboard-config
-     fileName: grafana_dashboard_config.json
+   - configMapName: grafana-dashboards-provisioning
+  
 
 ## Service parameters
 ##
