@@ -38,6 +38,9 @@ grafana:
         items:
           - key: grafana_dashboard_config.json
             path: grafana_dashboard_config.json
+    - name: grafana-datasources
+      configMap:
+        name: grafana-datasources
 
           
 dashboardsProvider:
