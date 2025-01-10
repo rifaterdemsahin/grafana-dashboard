@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram name="Page-1" id="UF32ZmSZ-HkCDWs4gbdD">
-        <mxGraphModel dx="1549" dy="433" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1761" dy="560" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -19,8 +19,8 @@
                 <mxCell id="15" value="" style="edgeStyle=none;html=1;" parent="1" source="9ePJfuIXcxr0tw5X6WYj-2" target="14" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="9ePJfuIXcxr0tw5X6WYj-2" value="2_Real" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1" parent="1" vertex="1">
-                    <mxGeometry x="410" y="120" width="120" height="60" as="geometry"/>
+                <mxCell id="9ePJfuIXcxr0tw5X6WYj-2" value="2_Real&lt;br&gt;/workspaces/grafana-dashboard/2_Real" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="350" y="120" width="240" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="5" value="" style="edgeStyle=none;html=1;" parent="1" source="2" target="4" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
