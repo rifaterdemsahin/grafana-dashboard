@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: grafana-datasources
+  namespace: grafana
+  labels:
+    grafana_datasource: "1"
+data:
+  random-walk-datasource.yaml: |
+    apiVersion: 1
+    datasources:
+      - name: Random Walk Data
+        type: testdata
+        access: proxy
+        isDefault: true
