@@ -25,24 +25,27 @@ grafana:
   extraVolumes:
     - name: grafana-storage
       emptyDir: {}
+  extraVolumeMounts:
+    - name: grafana-storage
+      mountPath: /opt/bitnami/grafana
   volumeMounts:
     - name: grafana-storage
       mountPath: /opt/bitnami/grafana
     - name: grafana-datasources
       mountPath: /opt/bitnami/grafana/provisioning/datasources
   volumes:
+    - name: grafana-storage
+      emptyDir: {}
     - name: grafana-dashboard-config
       configMap:
         name: grafana-dashboard-config
     - name: grafana-dashboards-provisioning
       configMap:
         name: grafana-dashboards-provisioning
-
     - name: grafana-datasources
       configMap:
         name: grafana-datasources
 
-          
 dashboardsProvider:
   enabled: true
   configMapName: grafana-dashboards-provisioning
