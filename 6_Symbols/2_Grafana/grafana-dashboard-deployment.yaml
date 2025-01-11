@@ -28,9 +28,6 @@ grafana:
   volumeMounts:
     - name: grafana-storage
       mountPath: /opt/bitnami/grafana
-    - name: grafana-dashboard-config
-      mountPath: /opt/bitnami/grafana/dashboards
-      readOnly: true
     - name: grafana-datasources
       mountPath: /opt/bitnami/grafana/provisioning/datasources
   volumes:
