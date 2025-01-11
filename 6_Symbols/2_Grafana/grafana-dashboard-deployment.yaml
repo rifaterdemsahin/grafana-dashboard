@@ -9,6 +9,9 @@ admin:
 
 ## @section Grafana Deployment parameters
 grafana:
+  envVars:
+    - name: GF_LOG_LEVEL
+      value: debug
   ## @param grafana.replicaCount Number of Grafana nodes
   ##
   replicaCount: 1
