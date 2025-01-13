@@ -7,11 +7,13 @@ admin:
   ## Test this to make sure the values yaml used your values not the default values...if the structure fails it defaults back to default values
   password: "your-password"
 
-dashboardsConfigMaps:
-  enabled: true
-  configMaps:
-    - configMapName: grafana-dashboard-config
-      fileName: grafana_dashboard_config.json
+dashboardsProvider:
+  enabled: false
+  dashboardsConfigMaps:
+    enabled: true
+    configMaps:
+      - configMapName: grafana-dashboard-config
+        fileName: grafana_dashboard_config.json
         
 ## @section Grafana Deployment parameters
 grafana:
