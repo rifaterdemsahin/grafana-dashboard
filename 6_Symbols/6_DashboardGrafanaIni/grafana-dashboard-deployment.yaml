@@ -60,7 +60,7 @@ grafana:
     - name: grafana-dashboard-config
       mountPath: /opt/bitnami/grafana/dashboards
     - name: grafana-datasources
-      mountPath: /opt/bitnami/grafana/provisioning/datasources
+      mountPath: /opt/bitnami/grafana/conf/provisioning/datasources
       subPath: random-walk-datasource.yaml
     
   volumes:
