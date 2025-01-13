@@ -15,10 +15,8 @@ dashboardsProvider:
   enabled: false
 
 dashboardsConfigMaps:
-  enabled: true
-  configMaps:
-    - configMapName: grafana-dashboard-config
-      fileName: grafana_dashboard_config.json
+  - configMapName: grafana-dashboard-config
+    fileName: grafana_dashboard_config.json
         
 ## @section Grafana Deployment parameters
 grafana:
