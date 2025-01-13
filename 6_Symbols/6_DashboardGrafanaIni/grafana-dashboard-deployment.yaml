@@ -8,7 +8,7 @@ admin:
   password: "your-password"
 
 config:
-  useGrafanaIniFile: true
+  useGrafanaIniFile: false
   grafanaIniConfigMap: myconfig
 
 dashboardsProvider:
