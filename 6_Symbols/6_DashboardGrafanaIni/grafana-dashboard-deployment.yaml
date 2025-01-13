@@ -12,7 +12,7 @@ config:
   grafanaIniConfigMap: myconfig
 
 dashboardsProvider:
-  enabled: false
+  enabled: true
 
 dashboardsConfigMaps:
   - configMapName: grafana-dashboard-config

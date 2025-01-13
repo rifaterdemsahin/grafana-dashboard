@@ -16,6 +16,7 @@
 - helm upgrade grafana bitnami/grafana --namespace grafana-monitoring -f grafana-dashboard-deployment.yaml 
 - minikube start --memory=4096 --cpus=2 
 - kubectl get pods -n grafana-monitoring
+- kubectl rollout restart deployment grafana -n grafana-monitoring 
 - kubectl delete pod grafana-64fcf79d7c-t8xhd  -n grafana-monitoring
 
 - kubectl port-forward -n grafana-monitoring svc/grafana 3000:3000  
