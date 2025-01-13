@@ -6,11 +6,11 @@ metadata:
     grafana_datasource: "1"
 data:
   time-series-datasource.yaml: |
-    apiVersion: 1
-    datasources:
-      - name: Time Series Data
-        type: testdata
-        access: proxy
-        isDefault: true
-        jsonData:
-          timeInterval: "1m"
+  apiVersion: 1
+  datasources:
+    - name: Time Series Data
+      type: testdata
+      access: proxy
+      isDefault: true
+      jsonData:
+        timeInterval: "1m"
