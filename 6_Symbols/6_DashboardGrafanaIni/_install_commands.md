@@ -3,12 +3,12 @@
 - kubectl create namespace grafana-monitoring 
 - helm repo add bitnami https://charts.bitnami.com/bitnami  
 - helm repo update 
-- cd 6_Symbols/4_DashboardConfigMaps
+- cd 6_Symbols/6_DashboardGrafanaIni
 - clear
 
 - kubectl apply -f myconfig.yaml -n grafana-monitoring 
 
-- kubectl create grafana-datasources -f grafana-datasource.yaml -n grafana-monitoring 
+- kubectl apply grafana-datasources -f grafana-datasource.yaml -n grafana-monitoring 
 - kubectl apply -f configmap_randomwalk.yaml -n grafana-monitoring
 - kubectl create secret generic datasource-secret --from-file=datasource-secret.yaml -n grafana-monitoring
 - helm install grafana bitnami/grafana --namespace grafana-monitoring -f grafana-dashboard-deployment.yaml 
