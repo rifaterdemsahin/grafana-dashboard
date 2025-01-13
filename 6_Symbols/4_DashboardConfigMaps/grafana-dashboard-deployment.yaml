@@ -8,7 +8,7 @@ admin:
   password: "your-password"
 
 dashboardsProvider:
-  enabled: false
+  enabled: true
   dashboardsConfigMaps:
     enabled: true
     configMaps:
