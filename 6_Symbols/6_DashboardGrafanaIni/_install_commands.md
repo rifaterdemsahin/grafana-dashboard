@@ -1,0 +1,11 @@
+- minikube delete
+- minikube start --memory=4096 --cpus=2 
+- kubectl create namespace grafana-monitoring 
+- helm repo add bitnami https://charts.bitnami.com/bitnami  
+- helm repo update 
+- cd 6_Symbols/4_DashboardConfigMaps
+- clear
+- kubectl apply -f grafana-datasource.yaml -n grafana-monitoring 
+- kubectl apply -f configmap_randomwalk.yaml -n grafana-monitoring
+- kubectl create secret generic datasource-secret --from-file=datasource-secret.yaml -n grafana-monitoring
+- helm install grafana bitnami/grafana --namespace grafana-monitoring -f grafana-dashboard-deployment.yaml 

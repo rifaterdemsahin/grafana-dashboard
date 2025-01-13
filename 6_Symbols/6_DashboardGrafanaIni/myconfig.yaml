@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+    name: myconfig
+data:
+    grafana.ini: |-
+        dashboardsProvider.enabled=true
+        datasources.secretName=datasource-secret
+        dashboardsConfigMaps[0].configMapName=grafana-dashboard-config
+        dashboardsConfigMaps[0].fileName=grafana_dashboard_config.json

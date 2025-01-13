@@ -1,0 +1,75 @@
+admin:
+  ## @param admin.user Grafana admin username
+  ##
+  user: "admin"
+  ## @param admin.password Admin password. If a password is not provided a random password will be generated
+  ##
+  ## Test this to make sure the values yaml used your values not the default values...if the structure fails it defaults back to default values
+  password: "your-password"
+
+config:
+  useGrafanaIniFile: true
+  grafanaIniConfigMap: myconfig
+
+dashboardsProvider:
+  enabled: false
+
+dashboardsConfigMaps:
+  enabled: true
+  configMaps:
+    - configMapName: grafana-dashboard-config
+      fileName: grafana_dashboard_config.json
+        
+## @section Grafana Deployment parameters
+grafana:
+  envVars:
+    - name: GF_LOG_LEVEL
+      value: debug
+  ## @param grafana.replicaCount Number of Grafana nodes
+  ##
+  replicaCount: 1
+  persistence:
+    enabled: true
+    size: 100Mi
+  service:
+    type: NodePort
+    port: 3000
+    nodePort: 30000
+  extraVolumes:
+    - name: grafana-storage
+      emptyDir: {}
+  volumeMounts:
+    - name: grafana-storage
+      mountPath: /opt/bitnami/grafana
+    - name: grafana-dashboard-config
+      mountPath: /opt/bitnami/grafana/dashboards
+    - name: grafana-datasources
+      mountPath: /opt/bitnami/grafana/provisioning/datasources
+    
+  volumes:
+    - name: grafana-dashboard-config
+      configMap:
+        name: grafana-dashboard-config
+    - name: grafana-datasources
+      configMap:
+        name: grafana-datasources
+    - name: grafana-secrets
+      secret:
+        name: grafana-datasource-secret
+
+
+## Service parameters
+##
+service:
+  ## @param service.type Kubernetes Service type
+  ##
+  type: ClusterIP
+  ## @param service.clusterIP Grafana service Cluster IP
+  ## e.g.:
+  ## clusterIP: None
+  ##
+  # clusterIP: ""
+  ## @param service.ports.grafana Grafana service port
+  ##
+  ports:
+    grafana: 3000
