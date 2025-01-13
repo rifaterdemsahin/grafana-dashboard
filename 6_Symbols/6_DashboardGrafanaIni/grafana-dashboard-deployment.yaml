@@ -17,6 +17,24 @@ dashboardsProvider:
 dashboardsConfigMaps:
   - configMapName: grafana-dashboard-config
     fileName: grafana_dashboard_config.json
+
+datasources:
+  secretName: "grafana-datasource-secret"
+    secretDefinition:
+      apiVersion: 1
+      datasources:
+        - name: Random Walk
+          type: grafana-random-walk
+          access: proxy
+          url: http://random-walk:8080
+          isDefault: true
+          jsonData:
+            timeInterval: 5s
+          secureJsonData:
+            basicAuthPassword: cGFzc3dvcmQ=
+              tlsSkipVerify: true
+            basicAuthUser: dXNlcg==
+              tlsSkipVerify: true
         
 ## @section Grafana Deployment parameters
 grafana:
