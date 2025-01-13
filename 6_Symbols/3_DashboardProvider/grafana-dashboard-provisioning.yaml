@@ -3,12 +3,12 @@ kind: ConfigMap
 metadata:
   name: grafana-dashboards-provisioning
 data:
-  grafana_dashboard_config.yaml: |
+  default.yaml: |
       apiVersion: 1
       providers:
-        - name: "grafanadashboardconfig"
+        - name: "default"
           orgId: 1
           folder: ""
           type: "file"
           options:
-              path: /opt/bitnami/grafana/dashboards/grafana_dashboard_config.yaml
+              path: /opt/bitnami/grafana/dashboards/
