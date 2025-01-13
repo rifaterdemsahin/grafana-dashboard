@@ -13,9 +13,14 @@
 - kubectl create secret generic datasource-secret --from-file=datasource-secret.yaml -n grafana-monitoring
 - helm install grafana bitnami/grafana --namespace grafana-monitoring -f grafana-dashboard-deployment.yaml 
 
+- helm upgrade grafana bitnami/grafana --namespace grafana-monitoring -f grafana-dashboard-deployment.yaml 
+- minikube start --memory=4096 --cpus=2 
+- kubectl get pods -n grafana-monitoring
+- kubectl delete pod grafana-64fcf79d7c-t8xhd  -n grafana-monitoring
+
 - kubectl port-forward -n grafana-monitoring svc/grafana 3000:3000  
 
 
 - kubectl get pods -n grafana-monitoring
-- kubectl logs grafana-64fcf79d7c-t8xhd  -n grafana-monitoring
+- kubectl logs grafana-684556c4c8-r45fc  -n grafana-monitoring
 - kubectl logs grafana-64fcf79d7c-t8xhd  -n grafana-monitoring > mylog.md
