@@ -33,7 +33,11 @@ grafana:
       readOnly: true
     - name: grafana-datasources
       mountPath: /opt/bitnami/grafana/provisioning/datasources
+    
   volumes:
+    - name: grafana-dashboard-config
+      configMap:
+        name: grafana-dashboard-config
     - name: grafana-datasources
       configMap:
         name: grafana-datasources
