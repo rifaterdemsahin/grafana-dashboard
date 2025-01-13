@@ -47,11 +47,12 @@ grafana:
       secret:
         name: grafana-datasource-secret
           
-dashboardsProvider:
-  enabled: true
-  configMapName: grafana-dashboard-config
+# dashboardsProvider:
+#   enabled: true
+#   configMapName: grafana-dashboard-config
 
 dashboardsConfigMaps:
+  enabled: true
    - configMapName: grafana-dashboard-config
      fileName: grafana_dashboard_config.json
    - configMapName: grafana-dashboards-provisioning
