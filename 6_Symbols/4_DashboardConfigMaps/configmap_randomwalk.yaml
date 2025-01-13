@@ -6,7 +6,7 @@ metadata:
   labels:
     grafana_dashboard: "1"
 data:
-  random-walk-dashboard.json: |
+  grafana_dashboard_config.json: |
     {
       "id": null,
       "uid": "random-walk-dashboard",
