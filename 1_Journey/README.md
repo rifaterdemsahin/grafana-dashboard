@@ -3,6 +3,9 @@
 
 This section of the README.md file provides a comprehensive guide on visual storytelling. It is designed to help users progress from a beginner level to a skilled level in visual storytelling. The guide is structured in steps to facilitate self-learning and ensure a smooth learning curve.
 
+- journey as the historial evidence to tell what has happened in this project.
+- shorted and summary implementations and single views
+
 ## Purpose
 The purpose of this guide is to:
 - Educate users on the principles and techniques of visual storytelling.

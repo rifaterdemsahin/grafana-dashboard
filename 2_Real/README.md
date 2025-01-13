@@ -1,6 +1,7 @@
 ## 🎯 The Job That Starts with Objective and Key Results
 
 Sets goals and objectives, aligning tasks with measurable results. Aim at it!
+Key points that you learned, when things gets stuck the key results can improve what you learned is important
 
 ### 🏆 Objective
 Create a Grafana dashboard
@@ -9,6 +10,7 @@ Create a Grafana dashboard
 - ➕ Have a grafana poc environment
 - ➕ Add panels manually
 - 🚀 Deploy dashboard with config YAML
+- 🚀 Self learn skills gaps
 
 prompt:
 - use emojis
