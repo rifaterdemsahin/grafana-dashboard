@@ -13,6 +13,12 @@
 - kubectl create secret generic datasource-secret --from-file=datasource-secret.yaml -n grafana-monitoring
 - helm install grafana bitnami/grafana --namespace grafana-monitoring -f grafana-dashboard-deployment.yaml 
 
+
+- provisioning/datasources >>> provision datasource is missing
+- /workspaces/grafana-dashboard/6_Symbols/6_DashboardGrafanaIni/grafana-datasource-provision.yaml
+
+
+
 - helm upgrade grafana bitnami/grafana --namespace grafana-monitoring -f grafana-dashboard-deployment.yaml 
 - minikube start --memory=4096 --cpus=2 
 - kubectl get pods -n grafana-monitoring
