@@ -1,15 +1,15 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: grafana-dashboard-config
+  name: grafana-dashboard-config1
   namespace: grafana-monitoring
   labels:
     grafana_dashboard: "1"
 data:
-  grafana_dashboard_config.json: |
+  grafana_dashboard_config1.json: |
     {
       "id": null,
-      "title": "Random Walk Dashboard",
+      "title": "Random Walk Dashboard1",
       "tags": [],
       "timezone": "browser",
       "schemaVersion": 16,
