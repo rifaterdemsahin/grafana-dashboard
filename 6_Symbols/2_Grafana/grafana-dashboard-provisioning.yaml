@@ -11,4 +11,4 @@ data:
           folder: ""
           type: "file"
           options:
-              path: /opt/bitnami/grafana/dashboards
+              path: /opt/bitnami/grafana/dashboards/grafana_dashboard_config.yaml
