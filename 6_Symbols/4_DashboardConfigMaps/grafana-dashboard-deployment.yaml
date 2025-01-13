@@ -40,12 +40,11 @@ grafana:
     - name: grafana-secrets
       secret:
         name: grafana-datasource-secret
-
-dashboardsConfigMaps:
-  enabled: true
-  configMaps:
-   - configMapName: grafana-dashboard-config
-     fileName: grafana_dashboard_config.json
+  dashboardsConfigMaps:
+    enabled: true
+    configMaps:
+      - configMapName: grafana-dashboard-config
+        fileName: grafana_dashboard_config.json
 
 ## Service parameters
 ##
