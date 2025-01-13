@@ -5,10 +5,12 @@ metadata:
   labels:
     grafana_datasource: "1"
 data:
-  random-walk-datasource.yaml: |
+  time-series-datasource.yaml: |
     apiVersion: 1
     datasources:
-      - name: Random Walk Data
+      - name: Time Series Data
         type: testdata
         access: proxy
         isDefault: true
+        jsonData:
+          timeInterval: "1m"
