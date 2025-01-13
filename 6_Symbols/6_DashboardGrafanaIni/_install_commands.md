@@ -11,7 +11,8 @@
 - kubectl apply -f grafana-datasource.yaml -n grafana-monitoring 
 - kubectl apply -f configmap_randomwalk.yaml -n grafana-monitoring
 - kubectl create secret generic grafana-datasource-secret --from-file=datasource-secret.yaml -n grafana-monitoring
-- kubectl get secret datasource-secret -n grafana-monitoring
+
+- kubectl get secret grafana-datasource-secret -n grafana-monitoring
 - helm install grafana bitnami/grafana --namespace grafana-monitoring -f grafana-dashboard-deployment.yaml 
 
 
@@ -30,5 +31,5 @@
 
 
 - kubectl get pods -n grafana-monitoring
-- kubectl logs grafana-684556c4c8-r45fc  -n grafana-monitoring
+- kubectl logs grafana-858b6f76d7-cv694  -n grafana-monitoring
 - kubectl logs grafana-64fcf79d7c-t8xhd  -n grafana-monitoring > mylog.md

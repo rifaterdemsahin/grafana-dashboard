@@ -9,7 +9,6 @@ data:
   grafana_dashboard_config.json: |
     {
       "id": null,
-      "uid": "random-walk-dashboard",
       "title": "Random Walk Dashboard",
       "tags": [],
       "timezone": "browser",
