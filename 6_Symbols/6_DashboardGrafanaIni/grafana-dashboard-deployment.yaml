@@ -73,7 +73,8 @@ grafana:
     - name: datasources
       secret:
         name: grafana-datasource-secret
-
+      configMap:
+        name: grafana-datasources
 
 ## Service parameters
 ##

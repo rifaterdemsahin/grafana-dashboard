@@ -8,3 +8,5 @@ data:
         datasources.secretName=datasource-secret
         dashboardsConfigMaps[0].configMapName=grafana-dashboard-config
         dashboardsConfigMaps[0].fileName=grafana_dashboard_config.json
+        dashboardsConfigMaps[1].configMapName=grafana-dashboard
+        dashboardsConfigMaps[1].fileName=grafana_dashboard_config2.json
