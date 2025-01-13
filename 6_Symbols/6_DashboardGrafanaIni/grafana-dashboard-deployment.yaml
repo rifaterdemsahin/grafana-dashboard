@@ -69,7 +69,7 @@ grafana:
     - name: grafana-datasources
       configMap:
         name: grafana-datasources
-    - name: grafana-secrets
+    - name: datasources
       secret:
         name: grafana-datasource-secret
 

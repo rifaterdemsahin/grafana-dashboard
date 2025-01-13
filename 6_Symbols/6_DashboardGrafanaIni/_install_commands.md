@@ -8,9 +8,10 @@
 
 - kubectl apply -f myconfig.yaml -n grafana-monitoring 
 
-- kubectl apply grafana-datasources -f grafana-datasource.yaml -n grafana-monitoring 
+- kubectl apply -f grafana-datasource.yaml -n grafana-monitoring 
 - kubectl apply -f configmap_randomwalk.yaml -n grafana-monitoring
 - kubectl create secret generic datasource-secret --from-file=datasource-secret.yaml -n grafana-monitoring
+- kubectl get secret datasource-secret -n grafana-monitoring
 - helm install grafana bitnami/grafana --namespace grafana-monitoring -f grafana-dashboard-deployment.yaml 
 
 
