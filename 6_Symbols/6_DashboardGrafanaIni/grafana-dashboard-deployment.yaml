@@ -15,8 +15,10 @@ dashboardsProvider:
   enabled: true
 
 dashboardsConfigMaps:
-  - configMapName: grafana-dashboard-config
-    fileName: grafana_dashboard_config.json
+  - configMapName: grafana-dashboard-config1
+    fileName: grafana_dashboard_config1.json
+  - configMapName: grafana-dashboard-config2
+    fileName: grafana_dashboard_config2.json
 
 datasources:
   secretName: "grafana-datasource-secret"

@@ -10,3 +10,4 @@ data:
         dashboardsConfigMaps[0].fileName=grafana_dashboard_config1.json
         dashboardsConfigMaps[1].configMapName=grafana-dashboard-config2
         dashboardsConfigMaps[1].fileName=grafana_dashboard_config2.json
+        datasources.testdata.configMapName=grafana-datasources
