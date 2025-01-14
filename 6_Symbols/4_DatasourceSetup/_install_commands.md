@@ -29,7 +29,7 @@
 - kubectl rollout restart deployment grafana -n grafana-monitoring 
 - kubectl delete pod grafana-64fcf79d7c-t8xhd  -n grafana-monitoring
 
-
+-- running state v1> to 1 
 
 - kubectl port-forward -n grafana-monitoring svc/grafana 3000:3000  
 
