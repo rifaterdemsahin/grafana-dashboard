@@ -23,36 +23,66 @@ dashboardsConfigMaps:
 datasources:
   secretName: "grafana-datasource-secret"
         
-## @section Grafana Deployment parameters
 grafana:
+  ## Environment variables
+  ##
   envVars:
     - name: GF_LOG_LEVEL
       value: debug
-  ## @param grafana.replicaCount Number of Grafana nodes
+
+  ## Number of Grafana replicas
   ##
   replicaCount: 1
+
+  ## Persistence configuration
+  ##
   persistence:
     enabled: true
     size: 100Mi
+    ## If defined, storageClassName: <storageClass>
+    storageClassName: "standard"
+    accessModes:
+      - ReadWriteOnce
+
+  ## Service configuration
+  ##
   service:
     type: NodePort
     port: 3000
     nodePort: 30000
+
+  ## Additional volumes
+  ##
   extraVolumes:
     - name: grafana-storage
       emptyDir: {}
+    - name: datasources
+      secret:
+        secretName: grafana-datasource-secret
+
+  ## Volume mounts
+  ##
   volumeMounts:
     - name: grafana-storage
       mountPath: /opt/bitnami/grafana
-    # - name: grafana-datasource-secret
-    #   mountPath: /opt/bitnami/grafana/datasources
-      
-  volumes:
-    # - name: datasources
-    #   secret:
-    #     name: grafana-datasource-secret
-    #   configMap:
-    #     name: grafana-datasources
+    - name: datasources
+      mountPath: /opt/bitnami/grafana/conf/provisioning/datasources
+      readOnly: true
+
+  ## Resources configuration
+  ##
+  resources:
+    limits:
+      cpu: 200m
+      memory: 256Mi
+    requests:
+      cpu: 100m
+      memory: 128Mi
+
+  ## Configure additional datasources
+  ##
+  datasources:
+    secretName: grafana-datasource-secret
 
 ## Service parameters
 ##

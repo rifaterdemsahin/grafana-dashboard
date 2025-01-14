@@ -40,7 +40,7 @@
 
 - kubectl logs grafana-858b6f76d7-cv694  -n grafana-monitoring
 - kubectl logs grafana-64fcf79d7c-t8xhd  -n grafana-monitoring > mylog.md
-- kubectl describe pod grafana-6fbbccf49f-hbnr4  -n grafana-monitoring
+- kubectl describe pod grafana-6fbbccf49f-zw9gl  -n grafana-monitoring
 
 
 
