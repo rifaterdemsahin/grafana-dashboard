@@ -3,7 +3,7 @@
 - kubectl create namespace grafana-monitoring 
 - helm repo add bitnami https://charts.bitnami.com/bitnami  
 - helm repo update 
-- cd 6_Symbols/3_DashboardProvider
+- cd 6_Symbols/5.2_DashboardConfigMaps
 - clear
 
 - kubectl apply -f myconfig.yaml -n grafana-monitoring 
