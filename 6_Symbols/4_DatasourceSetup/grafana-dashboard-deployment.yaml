@@ -56,7 +56,7 @@ grafana:
   extraVolumes:
     - name: grafana-storage
       emptyDir: {}
-    - name: datasources
+    - name: grafana-datasource-secret
       secret:
         secretName: grafana-datasource-secret
 
@@ -79,10 +79,10 @@ grafana:
       cpu: 100m
       memory: 128Mi
 
-  ## Configure additional datasources
-  ##
-  datasources:
-    secretName: grafana-datasource-secret
+  # ## Configure additional datasources
+  # ##
+  # datasources:
+  #   secretName: grafana-datasource-secret
 
 ## Service parameters
 ##
