@@ -47,5 +47,5 @@
 
 oneliner > 
 ```bash
-minikube start --memory=4096 --cpus=2 ;kubectl create namespace grafana-monitoring ; kubectl apply -f myconfig.yaml -n grafana-monitoring ;kubectl apply -f grafana-datasource.yaml -n grafana-monitoring;kubectl apply -f configmap_dashboard_1.yaml -n grafana-monitoring;kubectl apply -f configmap_dashboard_2.yaml -n grafana-monitoring;kubectl create secret generic grafana-datasource-secret --from-file=datasource-secret.yaml -n grafana-monitoring;helm install grafana bitnami/grafana --namespace grafana-monitoring -f grafana-dashboard-deployment.yaml;kubectl port-forward -n grafana-monitoring svc/grafana 3000:3000
+minikube start --memory=4096 --cpus=2 ;kubectl create namespace grafana-monitoring ; kubectl apply -f myconfig.yaml -n grafana-monitoring ;kubectl apply -f configmap_dashboard_1.yaml -n grafana-monitoring;kubectl apply -f configmap_dashboard_2.yaml -n grafana-monitoring;kubectl create secret generic grafana-datasource-secret --from-file=datasource-secret.yaml -n grafana-monitoring;helm install grafana bitnami/grafana --namespace grafana-monitoring -f grafana-dashboard-deployment.yaml;kubectl port-forward -n grafana-monitoring svc/grafana 3000:3000
 ````
