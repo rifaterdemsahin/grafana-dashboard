@@ -5,10 +5,8 @@ metadata:
 data:
     grafana.ini: |-
         dashboardsProvider.enabled=true
-        datasources.secretName=datasource-secret
+        datasources.secretName=grafana-datasource-secret
         dashboardsConfigMaps[0].configMapName=grafana-dashboard-config1
         dashboardsConfigMaps[0].fileName=grafana_dashboard_config1.json
         dashboardsConfigMaps[1].configMapName=grafana-dashboard-config2
         dashboardsConfigMaps[1].fileName=grafana_dashboard_config2.json
-        datasources[0].configMapName=grafana-datasources
-        datasources[0].fileName=time-series-datasource.yaml
