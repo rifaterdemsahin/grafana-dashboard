@@ -71,24 +71,15 @@ grafana:
   volumeMounts:
     - name: grafana-storage
       mountPath: /opt/bitnami/grafana
-    - name: grafana-dashboard-config
-      mountPath: /opt/bitnami/grafana/dashboards
-    - name: grafana-datasources
-      mountPath: /opt/bitnami/grafana/conf/provisioning/datasources
-      subPath: random-walk-datasource.yaml
-    
+    # - name: grafana-datasource-secret
+    #   mountPath: /opt/bitnami/grafana/datasources
+      
   volumes:
-    - name: grafana-dashboard-config
-      configMap:
-        name: grafana-dashboard-config
-    - name: grafana-datasources
-      configMap:
-        name: grafana-datasources
-    - name: datasources
-      secret:
-        name: grafana-datasource-secret
-      configMap:
-        name: grafana-datasources
+    # - name: datasources
+    #   secret:
+    #     name: grafana-datasource-secret
+    #   configMap:
+    #     name: grafana-datasources
 
 ## Service parameters
 ##
