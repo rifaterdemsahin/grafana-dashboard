@@ -608,9 +608,6 @@
         <mxCell id="-oRYiasWtgIFFWfRjUbM-161" value="6" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
           <mxGeometry x="530" y="993.48" width="40" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="-oRYiasWtgIFFWfRjUbM-162" value="configMap &amp;gt; datasource &amp;gt; time-series-datasource.yaml" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
-          <mxGeometry x="600" y="950" width="300" height="20" as="geometry" />
-        </mxCell>
         <mxCell id="-oRYiasWtgIFFWfRjUbM-163" value="configMap &amp;gt; dashboard &amp;gt;&amp;nbsp;&lt;span style=&quot;background-color: rgb(13, 17, 23); color: rgb(230, 237, 243); font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; white-space: pre;&quot;&gt;grafana_dashboard_config1.json&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
           <mxGeometry x="590" y="993.48" width="360" height="20" as="geometry" />
         </mxCell>
