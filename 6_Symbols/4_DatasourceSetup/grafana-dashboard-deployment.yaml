@@ -10,6 +10,8 @@ admin:
 config:
   useGrafanaIniFile: false
   grafanaIniConfigMap: myconfig
+  # paths:
+  #   provisioning: /opt/bitnami/grafana/conf/provisioning
 
 dashboardsProvider:
   enabled: true
