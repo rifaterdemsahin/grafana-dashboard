@@ -356,6 +356,9 @@
         <mxCell id="-oRYiasWtgIFFWfRjUbM-175" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="112" target="115">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="-oRYiasWtgIFFWfRjUbM-191" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="112" target="-oRYiasWtgIFFWfRjUbM-190">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="112" value="pod" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
           <mxGeometry x="432.5" y="2380" width="120" height="60" as="geometry" />
         </mxCell>
@@ -599,7 +602,7 @@
         <mxCell id="-oRYiasWtgIFFWfRjUbM-158" value="5" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
           <mxGeometry x="530" y="935" width="40" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="-oRYiasWtgIFFWfRjUbM-159" value="port forward" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+        <mxCell id="-oRYiasWtgIFFWfRjUbM-159" value="port forward&lt;div&gt;needs running pod&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
           <mxGeometry x="432.5" y="2607.34" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="-oRYiasWtgIFFWfRjUbM-160" value="configMap &amp;gt; datasource &amp;gt; time-series-datasource.yaml" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
@@ -670,6 +673,15 @@
         </mxCell>
         <mxCell id="-oRYiasWtgIFFWfRjUbM-188" value="inside the storage" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
           <mxGeometry x="915" y="2270" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-oRYiasWtgIFFWfRjUbM-189" value="9" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="414" y="2650" width="40" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="-oRYiasWtgIFFWfRjUbM-190" value="&lt;div style=&quot;color: rgb(230, 237, 243); background-color: rgb(13, 17, 23); font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; line-height: 18px; white-space: pre;&quot;&gt;kubectl exec -it grafana-858b6f76d7-n96zk -n grafana-monitoring -- /bin/bash&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="-220" y="2380" width="572.5" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-oRYiasWtgIFFWfRjUbM-192" value="&lt;div style=&quot;color: rgb(230, 237, 243); background-color: rgb(13, 17, 23); font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; line-height: 18px; white-space: pre;&quot;&gt;&lt;div style=&quot;line-height: 18px;&quot;&gt;kubectl logs grafana-858b6f76d7-cv694  -n grafana-monitoring&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="-222.5" y="2470" width="572.5" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
