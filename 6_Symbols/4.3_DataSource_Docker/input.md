@@ -93,8 +93,11 @@ Your directory structure should look like this:
 ```
 
 ### 🚀 Start Grafana:
+cd /workspaces/grafana-dashboard/6_Symbols/4.3_DataSource_Docker/
 Now, run the following command to start Grafana with the TestData data source provisioned:
+
 ```sh
+docker rm -f grafana
 docker compose up -d
 ```
 

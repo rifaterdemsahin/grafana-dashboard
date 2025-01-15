@@ -49,3 +49,32 @@ See 'docker run --help'.
 docker: Error response from daemon: driver failed programming external connectivity on endpoint grafana_ds1 (0379725e2bc296de04a3acdb7ca0617feca1d6efd9d63f01a41478bf49c0093a): Bind for 0.0.0.0:3000 failed: port is already allocated.
 @rifaterdemsahin ➜ /workspaces/grafana-dashboard (main) $ 
 
+---
+
+ (main) $ docker compose up -d
+WARN[0000] /workspaces/grafana-dashboard/6_Symbols/4.3_DataSource_Docker/docker-compose.yaml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion 
+[+] Running 2/0
+ ✔ Network 43_datasource_docker_default           Created                  0.1s 
+ ✔ Volume "43_datasource_docker_grafana-storage"  Created                  0.0s 
+ ⠋ Container grafana                              C...                     0.0s 
+Error response from daemon: Conflict. The container name "/grafana" is already in use by container "9e7fb2b4c999f5e03eb2fb99d784c2e4f0b0342d8f7168108da86e6fe6c65237". You have to remove (or rename) that container to be able to reuse that name.
+@rifaterdemsahin ➜ /workspaces/grafana-dashboard/6_Symbols/4.3_DataSource_Docker (main) $ 
+
+---
+
+To resolve the conflict, you need to remove the existing container first. You can do this with the following command:
+
+```sh
+docker rm -f grafana
+```
+
+Then, you can run the `docker compose up -d` command again:
+
+```sh
+(main) $ docker compose up -d
+WARN[0000] /workspaces/grafana-dashboard/6_Symbols/4.3_DataSource_Docker/docker-compose.yaml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion 
+[+] Running 2/0
+ ✔ Network 43_datasource_docker_default           Created                  0.1s 
+ ✔ Volume "43_datasource_docker_grafana-storage"  Created                  0.0s 
+ ✔ Container grafana                              Started                  0.1s 
+```
