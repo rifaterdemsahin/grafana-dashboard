@@ -93,3 +93,78 @@ kubectl logs -n <operator-namespace> <grafana-operator-pod>
 ```
 
 This process should resolve the issue and ensure your `GrafanaDatasource` is properly applied.
+
+
+
+
+@rifaterdemsahin ➜ /workspaces/grafana-dashboard (main) $ kubectl get pods -n grafana-monitoring
+NAME                                                      READY   STATUS    RESTARTS   AGE
+alertmanager-prometheus-operator-kube-p-alertmanager-0    2/2     Running   0          103s
+grafana-operator-d4bc5bd4-zdfnx                           1/1     Running   0          2m47s
+prometheus-operator-grafana-78bc68c88b-pkmm7              3/3     Running   0          2m11s
+prometheus-operator-kube-p-operator-78ff77f9d5-trn9w      1/1     Running   0          2m11s
+prometheus-operator-kube-state-metrics-5bf8875d4b-q6tjt   1/1     Running   0          2m11s
+prometheus-operator-prometheus-node-exporter-76crq        1/1     Running   0          2m11s
+prometheus-prometheus-operator-kube-p-prometheus-0        2/2     Running   0          102s
+@rifaterdemsahin ➜ /workspaces/grafana-dashboard (main) $ 
+
+---------
+
+
+@rifaterdemsahin ➜ /workspaces/grafana-dashboard (main) $ kubectl get all -n grafana-monitoring
+NAME                                                          READY   STATUS    RESTARTS   AGE
+pod/alertmanager-prometheus-operator-kube-p-alertmanager-0    2/2     Running   0          3m22s
+pod/grafana-operator-d4bc5bd4-zdfnx                           1/1     Running   0          4m26s
+pod/prometheus-operator-grafana-78bc68c88b-pkmm7              3/3     Running   0          3m50s
+pod/prometheus-operator-kube-p-operator-78ff77f9d5-trn9w      1/1     Running   0          3m50s
+pod/prometheus-operator-kube-state-metrics-5bf8875d4b-q6tjt   1/1     Running   0          3m50s
+pod/prometheus-operator-prometheus-node-exporter-76crq        1/1     Running   0          3m50s
+pod/prometheus-prometheus-operator-kube-p-prometheus-0        2/2     Running   0          3m21s
+
+NAME                                                   TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)                      AGE
+service/alertmanager-operated                          ClusterIP   None             <none>        9093/TCP,9094/TCP,9094/UDP   3m22s
+service/grafana-operator-metrics-service               ClusterIP   10.100.203.213   <none>        9090/TCP,8888/TCP            4m26s
+service/prometheus-operated                            ClusterIP   None             <none>        9090/TCP                     3m21s
+service/prometheus-operator-grafana                    ClusterIP   10.99.139.163    <none>        80/TCP                       3m50s
+service/prometheus-operator-kube-p-alertmanager        ClusterIP   10.101.241.208   <none>        9093/TCP,8080/TCP            3m50s
+service/prometheus-operator-kube-p-operator            ClusterIP   10.105.129.64    <none>        443/TCP                      3m50s
+service/prometheus-operator-kube-p-prometheus          ClusterIP   10.110.245.216   <none>        9090/TCP,8080/TCP            3m50s
+service/prometheus-operator-kube-state-metrics         ClusterIP   10.109.158.103   <none>        8080/TCP                     3m50s
+service/prometheus-operator-prometheus-node-exporter   ClusterIP   10.100.50.242    <none>        9100/TCP                     3m50s
+
+NAME                                                          DESIRED   CURRENT   READY   UP-TO-DATE   AVAILABLE   NODE SELECTOR            AGE
+daemonset.apps/prometheus-operator-prometheus-node-exporter   1         1         1       1            1           kubernetes.io/os=linux   3m50s
+
+NAME                                                     READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/grafana-operator                         1/1     1            1           4m26s
+deployment.apps/prometheus-operator-grafana              1/1     1            1           3m50s
+deployment.apps/prometheus-operator-kube-p-operator      1/1     1            1           3m50s
+deployment.apps/prometheus-operator-kube-state-metrics   1/1     1            1           3m50s
+
+NAME                                                                DESIRED   CURRENT   READY   AGE
+replicaset.apps/grafana-operator-d4bc5bd4                           1         1         1       4m26s
+replicaset.apps/prometheus-operator-grafana-78bc68c88b              1         1         1       3m50s
+replicaset.apps/prometheus-operator-kube-p-operator-78ff77f9d5      1         1         1       3m50s
+replicaset.apps/prometheus-operator-kube-state-metrics-5bf8875d4b   1         1         1       3m50s
+
+NAME                                                                    READY   AGE
+statefulset.apps/alertmanager-prometheus-operator-kube-p-alertmanager   1/1     3m22s
+statefulset.apps/prometheus-prometheus-operator-kube-p-prometheus       1/1     3m21s
+
+
+### 5. Port Forward Grafana Service
+To access the Grafana dashboard, you need to port forward the Grafana service to your local machine. Run the following command:
+
+```bash
+kubectl port-forward service/prometheus-operator-grafana 3000:80 -n grafana-monitoring
+```
+
+This will forward the Grafana service to `http://localhost:3000`. You can now open your browser and navigate to this URL to access the Grafana dashboard.
+
+@rifaterdemsahin ➜ /workspaces/grafana-dashboard (main) $ kubectl port-forward service/prometheus-operator-grafana 3000:80 -n grafana-monitoring
+Forwarding from 127.0.0.1:3000 -> 3000
+Forwarding from [::1]:3000 -> 3000
+
+from tomi!
+username: admin
+password: prom-operator
