@@ -31,7 +31,7 @@ For more detailed steps on adding data sources through the UI, refer to [Grafana
 ### 🔌 Pre-install Data Source Plugins:
 Alternatively, you can pre-install data source plugins when running the Docker container:
 ```sh
-docker run -d -p 3000:3000 --name=grafana \
+docker run -d -p 3001:3000 --name=grafana_ds2 \
     -e "GF_INSTALL_PLUGINS=grafana-clock-panel,grafana-simple-json-datasource" \
     grafana/grafana-enterprise
 ```
