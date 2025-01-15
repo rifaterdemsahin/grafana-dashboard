@@ -70,7 +70,11 @@ grafana:
     - name: datasources
       mountPath: /opt/bitnami/grafana/conf/provisioning/datasources
       readOnly: true
-
+  volumes:
+    - name: datasources
+      config:
+        configMap: grafana-datasources1
+        configMap: grafana-datasources2
   ## Resources configuration
   ##
   resources:

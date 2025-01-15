@@ -11,6 +11,9 @@
 - kubectl apply -f configmap_dashboard_1.yaml -n grafana-monitoring
 - kubectl apply -f configmap_dashboard_2.yaml -n grafana-monitoring
 
+- kubectl apply -f grafana-datasource-provision1.yaml -n grafana-monitoring
+- kubectl apply -f grafana-datasource-provision2.yaml -n grafana-monitoring
+
 - kubectl create secret generic grafana-datasource-secret --from-file=datasource-secret.yaml -n grafana-monitoring
 
 - kubectl get secret grafana-datasource-secret -n grafana-monitoring
