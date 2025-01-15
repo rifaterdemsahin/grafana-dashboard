@@ -1,9 +1,16 @@
 # Tomi implementation Gpt Generated
-
+- minikube delete
 - minikube start
 - helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
 - helm repo update
 - kubectl create namespace grafana-monitoring 
+
+- helm repo add grafana https://grafana.github.io/helm-charts
+- helm repo update
+- helm install grafana-operator grafana/grafana-operator -n grafana-monitoring 
+
+
+
 - helm install prometheus-operator prometheus-community/kube-prometheus-stack -n grafana-monitoring
 # in the back ground it installs the grafana service
 
