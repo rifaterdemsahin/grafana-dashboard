@@ -98,6 +98,7 @@ Now, run the following command to start Grafana with the TestData data source pr
 
 ```sh
 docker rm -f grafana
+cd /workspaces/grafana-dashboard/6_Symbols/4.3_DataSource_Docker/
 docker compose up -d
 ```
 
