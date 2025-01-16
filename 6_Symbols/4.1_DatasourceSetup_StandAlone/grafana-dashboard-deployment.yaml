@@ -46,13 +46,6 @@ grafana:
     accessModes:
       - ReadWriteOnce
 
-  ## Service configuration
-  ##
-  service:
-    type: NodePort
-    port: 3000
-    nodePort: 30000
-
   ## Additional volumes
   ##
   extraVolumes:
@@ -61,21 +54,17 @@ grafana:
     - name: grafana-datasource-secret
       secret:
         secretName: grafana-datasource-secret
-    - name: datasource1
+    - name: datasource
       configMap:
-        name: grafana-datasources1
-    - name: datasource2
-      configMap:
-        name: grafana-datasources2
+        name: grafana-datasources
+
 
   ## Volume mounts
   ##
   volumeMounts:
     - name: grafana-storage
       mountPath: /opt/bitnami/grafana
-    - name: datasource1
-      mountPath: /opt/bitnami/grafana/conf/provisioning/datasources
-    - name: datasource2
+    - name: datasource
       mountPath: /opt/bitnami/grafana/conf/provisioning/datasources
 
   ## Resources configuration
