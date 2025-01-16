@@ -10,8 +10,6 @@ admin:
 config:
   useGrafanaIniFile: false
   grafanaIniConfigMap: myconfig
-  # paths:
-  #   provisioning: /opt/bitnami/grafana/conf/provisioning
 
 dashboardsProvider:
   enabled: true
@@ -65,7 +63,7 @@ grafana:
     - name: grafana-storage
       mountPath: /opt/bitnami/grafana
     - name: datasource
-      mountPath: /opt/bitnami/grafana/conf/provisioning/datasources
+      mountPath: /opt/bitnami/grafana/provisioning/datasources
 
   ## Resources configuration
   ##
