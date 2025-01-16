@@ -95,3 +95,10 @@ service:
   ##
   ports:
     grafana: 3000
+sidecars:
+  - name: init-grafana
+        image: busybox
+        command: ['sh', '-c', 'mkdir -p /opt/bitnami/grafana/provisioning/datasources']
+        volumeMounts:
+        - name: grafana-storage
+          mountPath: /opt/bitnami/grafana
