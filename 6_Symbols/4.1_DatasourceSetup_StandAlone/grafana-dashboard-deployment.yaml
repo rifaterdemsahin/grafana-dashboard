@@ -67,13 +67,18 @@ grafana:
   volumeMounts:
     - name: grafana-storage
       mountPath: /opt/bitnami/grafana
-    - name: datasources
+    - name: datasource1
+      mountPath: /opt/bitnami/grafana/conf/provisioning/datasources
+      readOnly: true
+    - name: datasource2
       mountPath: /opt/bitnami/grafana/conf/provisioning/datasources
       readOnly: true
   volumes:
-    - name: datasources
+    - name: datasource1
       config:
         configMap: grafana-datasources1
+    - name: datasource2
+      config:
         configMap: grafana-datasources2
   ## Resources configuration
   ##
