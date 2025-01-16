@@ -39,10 +39,9 @@ grafana:
   persistence:
     enabled: true
     size: 100Mi
-    ## If defined, storageClassName: <storageClass>
-    storageClassName: "standard"
+    storageClassName: "standard"  # Define storage class if needed
     accessModes:
-      - ReadWriteOnce
+      - ReadWriteOnce  # Access mode for the persistent volume
 
   ## Additional volumes
   ##
@@ -65,6 +64,7 @@ grafana:
     - name: datasource
       mountPath: /opt/bitnami/grafana/provisioning/datasources
 
+
   ## Resources configuration
   ##
   resources:
@@ -74,11 +74,6 @@ grafana:
     requests:
       cpu: 100m
       memory: 128Mi
-
-  # ## Configure additional datasources
-  # ##
-  # datasources:
-  #   secretName: grafana-datasource-secret
 
 ## Service parameters
 ##
@@ -95,10 +90,13 @@ service:
   ##
   ports:
     grafana: 3000
+
 sidecars:
-  - name: init-grafana
-    image: busybox
-    command: ['sh', '-c', 'mkdir -p /opt/bitnami/grafana/provisioning/datasources']
-    volumeMounts:
-      - name: grafana-storage
-        mountPath: /opt/bitnami/grafana
+  initContainers:
+    - name: init-grafana
+      image: busybox
+      imagePullPolicy: Always
+      command: ['sh', '-c', 'mkdir -p /opt/bitnami/grafana/provisioning/datasources']
+      volumeMounts:
+        - name: grafana-storage
+          mountPath: /opt/bitnami/grafana

@@ -19,8 +19,9 @@
 <!-- - 📄 kubectl apply -f grafana-datasource-provision2.yaml -n grafana-monitoring -->
 
 - 🔐 kubectl create secret generic grafana-datasource-secret --from-file=datasource-secret.yaml -n grafana-monitoring
-- 🛠️ helm install grafana bitnami/grafana --namespace grafana-monitoring -f grafana-dashboard-deployment.yaml 
+- 🛠️ helm install grafana bitnami/grafana --namespace grafana-monitoring -f grafana-dashboard-deployment.yaml --dry-run --debug
 
+- 🛠️ helm install grafana bitnami/grafana --namespace grafana-monitoring -f grafana-dashboard-deployment.yaml
 - 🔌 kubectl port-forward -n grafana-monitoring svc/grafana 3000:3000  
 
 
@@ -42,7 +43,7 @@ minikube start --memory=4096 --cpus=2 ;kubectl create namespace grafana-monitori
 
 xxxxxxxxxxxxxxxxxxxxxxxxxxxdebuggingxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 - 📦 kubectl get pods -n grafana-monitoring
-- 🖥️ kubectl exec -it grafana-66dc5cd4f-bl2hf -n grafana-monitoring -- /bin/bash
+- 🖥️ kubectl exec -it kubectl get pods -n grafana-monitoring -n grafana-monitoring -- /bin/bash
 - ls /opt/bitnami/grafana/conf/provisioning/datasources
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 - 📜 kubectl logs grafana-5f8bc665d9-rthn9 -n grafana-monitoring
