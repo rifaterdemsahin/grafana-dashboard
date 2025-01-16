@@ -61,6 +61,12 @@ grafana:
     - name: grafana-datasource-secret
       secret:
         secretName: grafana-datasource-secret
+    - name: datasource1
+      configMap:
+        name: grafana-datasources1
+    - name: datasource2
+      configMap:
+        name: grafana-datasources2
 
   ## Volume mounts
   ##
@@ -73,13 +79,7 @@ grafana:
     - name: datasource2
       mountPath: /opt/bitnami/grafana/conf/provisioning/datasources
       readOnly: true
-  volumes:
-    - name: datasource1
-      config:
-        configMap: grafana-datasources1
-    - name: datasource2
-      config:
-        configMap: grafana-datasources2
+
   ## Resources configuration
   ##
   resources:
