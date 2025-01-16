@@ -40,10 +40,11 @@ minikube start --memory=4096 --cpus=2 ;kubectl create namespace grafana-monitori
 - 🔄 kubectl rollout restart deployment grafana -n grafana-monitoring 
 - 🗑️ kubectl delete pod grafana-64fcf79d7c-t8xhd  -n grafana-monitoring
 
+xxxxxxxxxxxxxxxxxxxxxxxxxxxdebuggingxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 - 📦 kubectl get pods -n grafana-monitoring
-- 🖥️ kubectl exec -it grafana-6547d9cd6b-hp46j -n grafana-monitoring -- /bin/bash
+- 🖥️ kubectl exec -it grafana-66dc5cd4f-t7cr9 -n grafana-monitoring -- /bin/bash
 - ls /opt/bitnami/grafana/conf/provisioning/datasources
-
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 - 📜 kubectl logs grafana-5f8bc665d9-rthn9 -n grafana-monitoring
 - 📜 kubectl logs grafana-64fcf79d7c-t8xhd  -n grafana-monitoring > mylog.md
 - 📝 kubectl describe pod grafana-6fbbccf49f-zw9gl  -n grafana-monitoring
