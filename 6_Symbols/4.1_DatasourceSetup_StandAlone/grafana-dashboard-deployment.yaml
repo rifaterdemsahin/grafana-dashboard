@@ -75,10 +75,8 @@ grafana:
       mountPath: /opt/bitnami/grafana
     - name: datasource1
       mountPath: /opt/bitnami/grafana/conf/provisioning/datasources
-      readOnly: true
     - name: datasource2
       mountPath: /opt/bitnami/grafana/conf/provisioning/datasources
-      readOnly: true
 
   ## Resources configuration
   ##

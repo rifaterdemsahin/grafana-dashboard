@@ -40,7 +40,8 @@ minikube start --memory=4096 --cpus=2 ;kubectl create namespace grafana-monitori
 - 🗑️ kubectl delete pod grafana-64fcf79d7c-t8xhd  -n grafana-monitoring
 
 - 📦 kubectl get pods -n grafana-monitoring
-- 🖥️ kubectl exec -it grafana-5f8bc665d9-rthn9 -n grafana-monitoring -- /bin/bash
+- 🖥️ kubectl exec -it grafana-6547d9cd6b-hp46j -n grafana-monitoring -- /bin/bash
+- ls /opt/bitnami/grafana/conf/provisioning/datasources
 
 - 📜 kubectl logs grafana-5f8bc665d9-rthn9 -n grafana-monitoring
 - 📜 kubectl logs grafana-64fcf79d7c-t8xhd  -n grafana-monitoring > mylog.md
