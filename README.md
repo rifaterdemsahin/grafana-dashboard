@@ -1,4 +1,4 @@
-![Journey](blob:https://imgur.com/35c207d6-062c-44b5-ae6d-d09a30bf0103)
+![Journey](https://github.com/rifaterdemsahin/grafana-dashboard/blob/main/4_UI/4.35.1_drawio.png)
 
 You can copy and paste this code into your Markdown file to display the image. Let me know if you need any more help!
 
