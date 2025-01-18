@@ -1,4 +1,4 @@
-![Journey](https://viewer.diagrams.net/?tags=%7B%7D&lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=1.3.1.journey.drawio#Uhttps%3A%2F%2Fraw.githubusercontent.com%2Frifaterdemsahin%2Fgrafana-dashboard%2Fmain%2F1_Journey%2F1.3.1.journey.drawio](https://viewer.diagrams.net/?tags=%7B%7D&lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=1.3.1.journey.drawio#Uhttps%3A%2F%2Fraw.githubusercontent.com%2Frifaterdemsahin%2Fgrafana-dashboard%2Fmain%2F1_Journey%2F1.3.1.journey.drawio)
+<iframe frameborder="0" style="width:100%;height:2673px;" src="https://viewer.diagrams.net/?tags=%7B%7D&lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=1.3.1.journey.drawio#Uhttps%3A%2F%2Fraw.githubusercontent.com%2Frifaterdemsahin%2Fgrafana-dashboard%2Fmain%2F1_Journey%2F1.3.1.journey.drawio"></iframe>
 
 You can copy and paste this code into your Markdown file to display the image. Let me know if you need any more help!
 
